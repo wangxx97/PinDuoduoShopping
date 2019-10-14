@@ -19,11 +19,11 @@
     <hot-nav/>
     <!--3.广告位-->
     <div class="hot-ad">
-      <img src="./../../imgs/nav/center_banner.jpeg" alt="" width="100%">
-
+      <img src="./../../imgs/hot_ad/home_ad.gif" alt="" width="100%">
     </div>
-    <!--商品列表-->
-    <hot-shop-list/>
+    <!--4.商品的列表-->
+    <hot-shop-list />
+
   </div>
 </template>
 
@@ -33,10 +33,12 @@
     import 'swiper/dist/css/swiper.min.css'
 
     import HotNav from "./HotNav"
+    import HotShopList from "./HotShopList"
 
     export default {
         name: "Hot",
         components: {
+            HotShopList,
             HotNav
         },
         mounted() {
@@ -62,8 +64,11 @@
     height 100%
     padding-top 46px
     background #F5F5F5
-    .hot-ad
-      background-color #FFF
-      margin 8px 0
+
+
+  .hot-ad
+    background-color #FFF
+    margin 8px 0
+    padding 5px
 
 </style>

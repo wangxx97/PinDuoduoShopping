@@ -1,83 +1,130 @@
 <template>
   <div class="shop-container">
     <ul class="shop-list">
-      <li class="shop-list-item" v-for="(shop, index) in homeshoplist.goods_list" :key="index">
-        <img v-lazy="shop.image_url" alt="" width="100%">
-        <h4 class="list-item-title">{{shop.goods_name}}</h4>
+      <li class="shop-list-item">
+        <img src="./../../imgs/shop_list/shop_item.png" alt="" width="100%">
+        <h4 class="list-item-title">【唐幂】整条刺绣民族风围巾女士秋冬季中年妈妈羊绒羊毛披肩保暖</h4>
         <div class="list-item-bottom">
-          <div class="list-item-bottom-left">
-            <span class="list-item-bottom-left-price">¥{{shop.normal_price / 100}}</span>
-            <span class="">{{shop.sales_tip}}</span>
-          </div>
-          <div class="list-item-bottom-right">
-             <span class="item-user">
-                 <img v-lazy="user.avatar" alt="" v-for="(user, index) in shop.bubble" :key="index">
-             </span>
-            <button>去拼单</button>
-          </div>
+          <span class="item-price">￥26.9</span>
+          <span class="item-counter">已拼5345件</span>
+          <span class="item-user">
+            <img src="./../../imgs/shop_list/user1.jpg" alt="">
+            <img src="./../../imgs/shop_list/user2.jpg" alt="">
+          </span>
+          <span class="item-buy">
+            <button>去拼单 ></button>
+          </span>
+        </div>
+      </li>
+      <li class="shop-list-item">
+        <img src="./../../imgs/shop_list/shop_item.png" alt="" width="100%">
+        <h4 class="list-item-title">【唐幂】整条刺绣民族风围巾女士秋冬季中年妈妈羊绒羊毛披肩保暖</h4>
+        <div class="list-item-bottom">
+          <span class="item-price">￥26.9</span>
+          <span class="item-counter">已拼5345件</span>
+          <span class="item-user">
+            <img src="./../../imgs/shop_list/user1.jpg" alt="">
+            <img src="./../../imgs/shop_list/user2.jpg" alt="">
+          </span>
+          <span class="item-buy">
+            <button>去拼单 ></button>
+          </span>
+        </div>
+      </li>
+      <li class="shop-list-item">
+        <img src="./../../imgs/shop_list/shop_item.png" alt="" width="100%">
+        <h4 class="list-item-title">【唐幂】整条刺绣民族风围巾女士秋冬季中年妈妈羊绒羊毛披肩保暖</h4>
+        <div class="list-item-bottom">
+          <span class="item-price">￥26.9</span>
+          <span class="item-counter">已拼5345件</span>
+          <span class="item-user">
+            <img src="./../../imgs/shop_list/user1.jpg" alt="">
+            <img src="./../../imgs/shop_list/user2.jpg" alt="">
+          </span>
+          <span class="item-buy">
+            <button>去拼单 ></button>
+          </span>
         </div>
       </li>
     </ul>
   </div>
 </template>
 
-<script>
-  import {mapState} from 'vuex'
 
-  export default {
-    name: "HotShopList",
-    computed: {
-      ...mapState(['homeshoplist'])
+<script>
+    export default {
+        name: "HotShopList"
     }
-  }
 </script>
 
 <style scoped lang="stylus" ref="stylesheet/stylus">
-  @import "../../../../common/stylus/mixins.styl"
   .shop-container
-    background $bg
-    margin-bottom 6rem
-    .shop-list
-       .shop-list-item
-          margin-top  1rem
-          background-color #fff
-          display flex
-          flex-direction column
-          h4
-            font-size 1.6rem
-            padding 1rem
-            line-height 2rem
-          .list-item-bottom
-            padding 1rem
-            display flex
-            flex-direction row
-            justify-content space-around
-            align-items center
-            .list-item-bottom-left
-               display flex
-               justify-content space-between
-               align-items center
-               .list-item-bottom-left-price
-                  font-size 2rem
-                  font-weight bolder
-                  color red
-                  margin-right 1rem
-            .list-item-bottom-right
-               display flex
-               justify-content center
-               align-items center
-               .item-user
-                  img
-                    width 3rem
-                    border-radius 50%
-               button
-                  width 8rem
-                  height 3rem
-                  background-color #e02e24
-                  border-radius 1rem
-                  margin-left 1rem
-                  color #fff
-                  font-size 1.6rem
+    margin-bottom 50px
+    background-color #f5f5f5
 
+  .shop-list
+    .shop-list-item
+      margin-bottom 10px
+      background-color #fff
+      display flex
+      flex-direction column
+
+      .list-item-title
+        line-height: 22px;
+        width 94%
+        margin-left 3%
+        height 44px
+        overflow hidden
+
+      .list-item-bottom
+        margin 10px 0
+        display flex
+        flex-direction row
+        justify-content space-around
+        align-items center
+
+        .item-price
+          font-size 18px
+          text-align center
+          font-weight bolder
+          color red
+          flex 1
+
+        .item-counter
+          flex 2
+          font-size 12px
+          color #cccccc
+
+        .item-user
+          display flex
+          justify-content center
+          align-items center
+          flex 1
+
+          img
+            width 30px
+            border-radius 50%
+
+          img:nth-child(2)
+            margin-left -6px
+
+        .item-buy
+          flex 2
+
+          button
+            width 80%
+            height 34px
+            font-size 15px
+            border none
+            color #fff
+            display flex
+            justify-content center
+            align-items center
+            margin-left 10px
+            background-color red
+            border-radius 8px
 
 </style>
+
+
+
