@@ -140,7 +140,12 @@
                 // console.log(moveWidth);
                 // 3. 求出滚动条走的距离
                 this.barMoveWidth = -((this.bgBarW / this.scrollContentW) * moveWidth - this.endFlag);
-
+                // 4. 边界值处理
+                if (this.barMoveWidth <= 0) { //左边
+                    this.barMoveWidth = 0
+                } else if (this.barMoveWidth >= this.bgBarW - this.barXWidth) { //右边
+                    this.barMoveWidth = this.bgBarW - this.barXWidth;
+                }
             },
             //结束触摸
             handleTouchtEnd() {
