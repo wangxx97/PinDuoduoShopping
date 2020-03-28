@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "array-includes": "^3.0.3",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "better-scroll": "^1.13.4",
     "iscroll": "^5.2.0",
     "ly-tab": "^2.1.2",
